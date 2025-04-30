@@ -1,16 +1,17 @@
- "name": "unimart",
+ "
+{
+  "name": "rest-express",
   "version": "1.0.0",
-  "description": "Full-stack marketplace app",
-  "main": "server/index.js",
+  "type": "module",
+  "license": "MIT",
   "scripts": {
-    "start": "node server/index.js",
-    "client": "cd client && npm start",
-    "dev": "concurrently \"npm run start\" \"npm run client\""
+    "dev": "NODE_ENV=development tsx server/index.ts",
+    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "start": "NODE_ENV=production node dist/index.js",
+    "check": "tsc",
+    "db:push": "drizzle-kit push"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "pg": "^8.8.0",
-    "jsonwebtoken": "^9.0.0"
+    ...
   }
+}
