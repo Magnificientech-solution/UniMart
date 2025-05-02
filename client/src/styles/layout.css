@@ -1,0 +1,230 @@
+/* Layout styles */
+
+/* Page container */
+.page-container {
+  @apply min-h-screen flex flex-col;
+}
+
+.page-content {
+  @apply flex-1;
+}
+
+/* Grid layouts */
+.grid-cols-auto-fill {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6;
+}
+
+.grid-cols-auto-fit {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+/* Two column layout */
+.two-column-layout {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+/* Sidebar layout */
+.sidebar-layout {
+  @apply grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8;
+}
+
+/* Dashboard layout */
+.dashboard-layout {
+  @apply grid grid-cols-1 lg:grid-cols-[280px_1fr] min-h-screen;
+}
+
+.dashboard-sidebar {
+  @apply hidden lg:block bg-gray-50 border-r border-border p-4;
+}
+
+.dashboard-content {
+  @apply p-6;
+}
+
+/* Header and footer */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: 1px solid rgba(11, 31, 58, 0.1);
+  background: linear-gradient(to right, rgba(11, 31, 58, 0.02), var(--color-background), rgba(0, 179, 134, 0.02));
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.site-footer {
+  background-color: var(--color-background);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Hero section */
+.hero-section {
+  position: relative;
+  background: linear-gradient(to bottom right, 
+    rgba(11, 31, 58, 0.05), 
+    var(--color-background), 
+    rgba(0, 179, 134, 0.05)
+  );
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 6rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    padding: 8rem 0;
+  }
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/src/assets/grid-pattern.svg');
+  opacity: 0.05;
+}
+
+.hero-section::after {
+  content: "";
+  @apply absolute bottom-0 left-0 right-0 h-1/2 
+         bg-gradient-to-t from-background to-transparent;
+}
+
+/* Feature section */
+.feature-section {
+  @apply py-16 md:py-24;
+}
+
+.feature-card {
+  @apply flex flex-col items-center text-center p-6 rounded-lg 
+         bg-gray-50 border border-border;
+}
+
+/* Category and product grids */
+.category-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6;
+}
+
+.product-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+/* Product card */
+.product-card {
+  @apply flex flex-col rounded-lg border border-border 
+         bg-white shadow-sm overflow-hidden transition-all duration-300;
+}
+
+.product-card:hover {
+  @apply shadow-md border-primary/20 -translate-y-1;
+}
+
+.product-image-container {
+  @apply relative aspect-square overflow-hidden;
+}
+
+.product-image {
+  @apply w-full h-full object-cover transition-transform duration-500;
+}
+
+.product-card:hover .product-image {
+  @apply scale-105;
+}
+
+.product-details {
+  @apply p-4 flex flex-col flex-1;
+}
+
+.product-title {
+  @apply font-medium text-lg mb-1 line-clamp-2;
+}
+
+.product-price {
+  @apply text-primary font-semibold mt-auto;
+}
+
+/* Form layouts */
+.form-container {
+  @apply max-w-md mx-auto p-6 border border-border rounded-lg 
+         bg-white shadow-sm;
+}
+
+.form-row {
+  @apply mb-4;
+}
+
+.form-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+/* Responsive utilities */
+.hide-on-mobile {
+  @apply hidden md:block;
+}
+
+.show-on-mobile {
+  @apply block md:hidden;
+}
+
+/* Z-index utility classes */
+.z-header {
+  @apply z-50;
+}
+
+.z-dropdown {
+  @apply z-40;
+}
+
+.z-modal {
+  @apply z-30;
+}
+
+.z-sticky {
+  @apply z-20;
+}
+
+/* Media query helpers */
+@media (max-width: 640px) {
+  .sm-stack {
+    @apply flex flex-col;
+  }
+}
+
+@media (max-width: 768px) {
+  .md-stack {
+    @apply flex flex-col;
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

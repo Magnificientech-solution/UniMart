@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Enhanced Gradients -->
+  <defs>
+    <!-- Vibrant gradient for "Uni" part -->
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928CA" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    
+    <!-- Vibrant gradient for "Mart" part -->
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5D5FEF" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    
+    <!-- Logo icon gradient -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928CA" />
+      <stop offset="50%" stop-color="#5D5FEF" />
+      <stop offset="100%" stop-color="#00B386" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Background subtle gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Subtle background glow -->
+  <circle cx="120" cy="30" r="100" fill="url(#bgGlow)" />
+  
+  <!-- Shopping Cart Icon with enhanced appearance -->
+  <g transform="translate(5, 15) scale(1.6)" filter="url(#glow)">
+    <path d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H9.5C9.77614 7 10 6.77614 10 6.5C10 6.22386 9.77614 6 9.5 6H5V4H8V2H4.5C4.22386 2 4 2.22386 4 2.5V12.5C4 13.3284 4.67157 14 5.5 14C6.32843 14 7 13.3284 7 12.5V11H19.5L17.25 4.5C17.1257 4.12739 16.7766 3.87489 16.38 3.9L8 5V3C8 2.44772 8.44772 2 9 2H18C18.5523 2 19 1.55228 19 1C19 0.447715 18.5523 0 18 0H9C7.34315 0 6 1.34315 6 3V3.17632L5.71923 3.2071C4.95407 3.29553 4.29769 3.78775 4.03751 4.49927L2.16249 9.50073C1.94167 10.1139 2.12968 10.8082 2.64254 11.2185C2.23096 11.9075 2 12.7256 2 13.6C2 16.5287 4.47127 19 7.4 19C10.3287 19 12.8 16.5287 12.8 13.6C12.8 13.5543 12.7994 13.5087 12.7982 13.4633C12.9331 13.4877 13.0743 13.5 13.2182 13.5C14.3341 13.5 15.2727 12.6223 15.3582 11.5203L15.5167 9H7.4C7.23531 9 7.07379 9.00583 6.91581 9.0172C6.96846 9.33147 7 9.66106 7 10H8ZM6.31346 10.0184C6.4262 11.8077 7.75913 13.2252 9.5 13.4722C9.74287 13.5048 9.95115 13.6648 10.0518 13.8893C10.5825 15.0618 11.6978 15.9 13 15.9C14.3021 15.9 15.4175 15.0618 15.9482 13.8893C16.0488 13.6648 16.2571 13.5048 16.5 13.4722C18.2409 13.2252 19.5738 11.8077 19.6865 10.0184C19.6953 9.84189 19.7 9.6633 19.7 9.48246C19.7 7.03858 17.7193 5.05792 15.2754 5.05792C14.9121 5.05792 14.5577 5.10095 14.2184 5.18244C13.8681 4.15751 12.8851 3.4 11.725 3.4C10.5649 3.4 9.58185 4.15751 9.23159 5.18244C8.89228 5.10095 8.53788 5.05792 8.17465 5.05792C5.7307 5.05792 3.75 7.03858 3.75 9.48246C3.75 9.6633 3.75472 9.84189 3.76346 10.0184Z" fill="url(#iconGradient)" />
+  </g>
+  
+  <!-- Enhanced 3D effect for the logo text -->
+  <g filter="url(#glow)">
+    <!-- Shadow effect for 3D look -->
+    <text x="51" y="41" font-family="Arial, sans-serif" font-size="28" font-weight="900" fill="rgba(0,0,0,0.2)">
+      <tspan>Uni</tspan><tspan>Mart</tspan>
+    </text>
+    
+    <!-- Main text with vibrant gradients -->
+    <text x="50" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="900" style="letter-spacing: 0.5px;">
+      <tspan fill="url(#gradient1)">Uni</tspan><tspan fill="url(#gradient2)">Mart</tspan>
+    </text>
+  </g>
+  
+  <!-- Enhanced Tagline with gradient -->
+  <text x="55" y="55" font-family="Arial, sans-serif" font-size="10.5" font-weight="500" fill="#0B1F3A" letter-spacing="0.5">
+    Everything you need in one place
+  </text>
+  
+  <!-- Subtle glow effect around logo -->
+  <circle cx="120" cy="30" r="60" fill="url(#bgGlow)" style="mix-blend-mode: overlay;" />
+</svg>

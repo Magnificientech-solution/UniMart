@@ -1,0 +1,261 @@
+/* Call to Action (CTA) Styles */
+
+/* Primary CTA button with prominence */
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  background-color: var(--color-primary);
+  color: white;
+  transition: all 250ms ease;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 4px 6px -1px rgba(11, 31, 58, 0.1), 0 2px 4px -1px rgba(11, 31, 58, 0.06);
+}
+
+.cta-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(11, 31, 58, 0.1), 0 4px 6px -2px rgba(11, 31, 58, 0.05);
+}
+
+.cta-primary:active {
+  transform: translateY(0);
+}
+
+/* CTAs with icons */
+.cta-icon {
+  margin-right: 0.5rem;
+}
+
+.cta-icon-end {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* CTA with accent color */
+.cta-accent {
+  background-color: var(--color-accent);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 179, 134, 0.1), 0 2px 4px -1px rgba(0, 179, 134, 0.06);
+}
+
+.cta-accent:hover {
+  background-color: var(--color-accent-hover);
+  box-shadow: 0 10px 15px -3px rgba(0, 179, 134, 0.1), 0 4px 6px -2px rgba(0, 179, 134, 0.05);
+}
+
+/* Secondary CTA */
+.cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  background-color: white;
+  color: var(--color-primary);
+  border: 1px solid rgba(11, 31, 58, 0.2);
+  transition: all 250ms ease;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(11, 31, 58, 0.05);
+}
+
+.cta-secondary:hover {
+  background-color: rgba(11, 31, 58, 0.05);
+  border-color: rgba(11, 31, 58, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(11, 31, 58, 0.1), 0 2px 4px -1px rgba(11, 31, 58, 0.06);
+}
+
+.cta-secondary:active {
+  transform: translateY(0);
+}
+
+/* Tertiary CTA */
+.cta-tertiary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  background-color: transparent;
+  color: var(--color-primary);
+  transition: all 250ms ease;
+  text-decoration: none;
+}
+
+.cta-tertiary:hover {
+  background-color: rgba(11, 31, 58, 0.05);
+}
+
+/* CTA sizes */
+.cta-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.cta-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.cta-xl {
+  padding: 0.875rem 1.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* Full width CTA */
+.cta-full {
+  width: 100%;
+}
+
+/* CTA groups */
+.cta-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.cta-group-vertical {
+  flex-direction: column;
+}
+
+/* CTA with attention pulse animation */
+.cta-pulse {
+  animation: ctaPulse 2s infinite;
+}
+
+@keyframes ctaPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(11, 31, 58, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(11, 31, 58, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(11, 31, 58, 0);
+  }
+}
+
+/* Floating CTA (fixed position for important actions) */
+.cta-floating {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon-only CTA */
+.cta-icon-only {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.375rem;
+  background-color: var(--color-primary);
+  color: white;
+  transition: all 250ms ease;
+  box-shadow: 0 1px 2px rgba(11, 31, 58, 0.05);
+}
+
+.cta-icon-only:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(11, 31, 58, 0.1), 0 2px 4px -1px rgba(11, 31, 58, 0.06);
+}
+
+.cta-icon-only.rounded-full {
+  border-radius: 9999px;
+}
+
+/* CTA with loading spinner */
+.cta-loading {
+  position: relative;
+  opacity: 0.85;
+  cursor: wait;
+}
+
+.cta-loading .cta-text {
+  visibility: hidden;
+}
+
+.cta-loading::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  border: 2px solid white;
+  border-right-color: transparent;
+  animation: spin 0.75s linear infinite;
+  top: calc(50% - 0.5rem);
+  left: calc(50% - 0.5rem);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* CTA with tooltip */
+.cta-with-tooltip {
+  position: relative;
+}
+
+.cta-tooltip {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease, visibility 200ms ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.cta-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-primary) transparent transparent transparent;
+}
+
+.cta-with-tooltip:hover .cta-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Focus visible state for accessibility */
+.cta-primary:focus-visible,
+.cta-secondary:focus-visible,
+.cta-tertiary:focus-visible,
+.cta-icon-only:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
