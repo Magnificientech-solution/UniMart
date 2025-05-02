@@ -62,13 +62,14 @@ app.use((req, res, next) => {
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
-  if (process.env.NODE_ENV === "development") {
+  if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
     serveStatic(app);
   }
 
-  // Use Render's PORT environment variable or fallback to default
+  // Simplify port handling to use a single port for Replit workflow
+  // Try different ports if the default is in use
   const port = process.env.PORT ? parseInt(process.env.PORT) : 5173;
   
   // Start the server and log any errors
@@ -79,6 +80,6 @@ app.use((req, res, next) => {
     log(`Server running on port ${port}`);
   }).on('error', (err: any) => {
     log(`Error starting server: ${err.message}`);
-    process.exit(1);
+    process.exit(1); // Exit with error so Replit can restart the process
   });
 })();

@@ -9,12 +9,12 @@ class PaymentProcessingService {
 
   constructor() {
     // Initialize Stripe if the API key is available
-    if ("dummykey") {
+    if (process.env.STRIPE_SECRET_KEY) {
       try {
-        this.stripe = new Stripe("dummykey", {
+        this.stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
           apiVersion: '2023-10-16',
         });
-        this.isDemo = true;
+        this.isDemo = false;
       } catch (error) {
         console.error('Error initializing Stripe:', error);
       }
@@ -23,9 +23,9 @@ class PaymentProcessingService {
     }
 
     // Initialize Stripe Connect for vendor payouts if available
-    if ("dummykey") {
+    if (process.env.STRIPE_CONNECT_CLIENT_ID) {
       // In a real implementation, we would set up Stripe Connect here
-      this.isDemo = true;
+      this.isDemo = false;
     }
   }
 
